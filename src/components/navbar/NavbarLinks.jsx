@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+import ResumeButton from "./ResumeButton";
 
 const links = [
   { link: "About Me", section: "about" },
@@ -28,6 +29,7 @@ const NavbarLinks = () => {
           </li>
         );
       })}
+      <ResumeButton />
     </ul>
   );
 };
