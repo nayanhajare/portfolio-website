@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with React, showcasing my skills, p
 
 ## 🚀 Live Demo
 
-[Portfolio Website]([https://your-portfolio-url.com](https://nayanportfolio-p95xocog2-nayan-hajares-projects.vercel.app/))
+[Portfolio Website](https://your-portfolio-url.com](https://nayanportfolio-p95xocog2-nayan-hajares-projects.vercel.app/)
 
 ## 📋 Table of Contents
 
