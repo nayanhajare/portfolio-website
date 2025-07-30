@@ -5,16 +5,16 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 
 const experiences = [
-  {
-  job: "Customer Service Executive",
-  company: "IGT Solutions (Indigo Airlines Process)",
-  date: "Feb 2024 - Dec 2024",
-  responsibilities: [
-    "Assisting customers with flight bookings, cancellations, and rescheduling.",
+//   {
+//   job: "Customer Service Executive",
+//   company: "IGT Solutions (Indigo Airlines Process)",
+//   date: "Feb 2024 - Dec 2024",
+//   responsibilities: [
+//     "Assisting customers with flight bookings, cancellations, and rescheduling.",
    
-    "Working with CRM tools and adhering to SLA timelines.",
-  ],
-}
+//     "Working with CRM tools and adhering to SLA timelines.",
+//   ],
+// }
 
 //   {
 //     job: "Front-End Developer",
