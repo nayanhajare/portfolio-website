@@ -5,8 +5,8 @@ const ResumeButton = () => {
     
     // Also trigger download
     const link = document.createElement('a');
-    link.href = '/NayanHajare-Resume.pdf';
-    link.download = 'NayanHajare-Resume.pdf';
+    link.href = '/Nayan_Hajare_Resume.pdf';
+    link.download = 'Nayan_Hajare_Resume.pdf';
     
     // Append to body, click, and remove
     document.body.appendChild(link);
