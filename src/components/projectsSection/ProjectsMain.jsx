@@ -9,28 +9,32 @@ const projects = [
     year: "Jul2025",
     align: "right",
     image: "/images/website-img-1.jpg",
-    link: "https://github.com/nayanhajare/Loan-App-frontend",
+    githubLink: "https://github.com/nayanhajare/Loan-App-frontend",
+    deployedLink: "https://loan-app-frontend-eight.vercel.app",
   },
   {
     name: "TeamSpace – Collaboration Tool",
     year: "Jun2025",
     align: "left",
     image: "/images/website-img-2.webp",
-    link: "https://github.com/nayanhajare/TeamSpace-Frontend",
+    githubLink: "https://github.com/nayanhajare/TeamSpace-Frontend",
+    deployedLink: "https://team-space-pi.vercel.app",
   },
   {
     name: "Investment Portfolio Tracker",
     year: "Feb2025",
     align: "right",
     image: "/images/website-img-3.jpg",
-    link: "https://github.com/nayanhajare/Investment-Protfolio-Tracker",
+    githubLink: "https://github.com/nayanhajare/Investment-Protfolio-Tracker",
+    deployedLink: "https://nayan-investmentportfoliotracker.netlify.app/login.html",
   },
   {
     name: "Portfolio Website",
     year: "Aug2025",
     align: "left",
     image: "/images/website-img-4.jpg",
-    link: "https://github.com/nayanhajare/portfolio-website",
+    githubLink: "https://github.com/nayanhajare/portfolio-website",
+    deployedLink: "https://nayanportfolio-xi.vercel.app",
   },
 ];
 
@@ -48,12 +52,13 @@ const ProjectsMain = () => {
       <div className="flex flex-col gap-20 max-w-[900px] mx-auto mt-12">
         {projects.map((project) => (
           <SingleProject
-            key={project.link} // Use a unique value for key
+            key={project.githubLink}
             name={project.name}
             year={project.year}
             align={project.align}
             image={project.image}
-            link={project.link} // Pass the required link prop
+            githubLink={project.githubLink}
+            deployedLink={project.deployedLink}
           />
         ))}
       </div>

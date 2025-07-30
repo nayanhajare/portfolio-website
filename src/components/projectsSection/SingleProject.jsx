@@ -1,10 +1,11 @@
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 import PropTypes from "prop-types";
 
 
-const SingleProject = ({ name, year, align, image, link }) => {
+const SingleProject = ({ name, year, align, image, githubLink, deployedLink }) => {
   return (
     <motion.div
       variants={fadeIn("top", 0)}
@@ -24,16 +25,27 @@ const SingleProject = ({ name, year, align, image, link }) => {
         >
           {year}
         </h2>
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`text-lg flex gap-2 items-center text-cyan hover:text-orange transition-all duration-500 cursor-pointer sm:justify-self-center ${
-            align === "left" ? "md:justify-self-end" : "md:justify-self-start"
-          }`}
-        >
-          View <BsFillArrowUpRightCircleFill />
-        </a>
+        <div className={`flex gap-4 sm:justify-center ${
+          align === "left" ? "md:justify-end" : "md:justify-start"
+        }`}>
+          <a
+            href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg flex gap-2 items-center text-cyan hover:text-orange transition-all duration-500 cursor-pointer"
+          >
+            <FaGithub className="text-xl" />
+            GitHub
+          </a>
+          <a
+            href={deployedLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg flex gap-2 items-center text-cyan hover:text-orange transition-all duration-500 cursor-pointer"
+          >
+            Live Demo <BsFillArrowUpRightCircleFill />
+          </a>
+        </div>
       </div>
       <div className="max-h-[220px] max-w-[400px] rounded-xl overflow-hidden hover:scale-110 transform transition-all duration-500 ralative border border-white">
         <div className="w-full h-full bg-cyan opacity-50 absolute top-0 left-0 hover:opacity-0 transition-all duration-500 md:block sm:hidden"></div>
@@ -47,7 +59,8 @@ SingleProject.propTypes = {
   year: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   align: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  githubLink: PropTypes.string.isRequired,
+  deployedLink: PropTypes.string.isRequired,
 };
 
 export default SingleProject;
