@@ -28,14 +28,14 @@ const projects = [
     githubLink: "https://github.com/nayanhajare/Investment-Protfolio-Tracker",
     deployedLink: "https://nayan-investmentportfoliotracker.netlify.app/login.html",
   },
-  {
-    name: "Portfolio Website",
-    year: "Aug2025",
-    align: "left",
-    image: "/images/website-img-4.jpg",
-    githubLink: "https://github.com/nayanhajare/portfolio-website",
-    deployedLink: "https://nayanportfolio-xi.vercel.app",
-  },
+  // {
+  //   name: "Portfolio Website",
+  //   year: "Aug2025",
+  //   align: "left",
+  //   image: "/images/website-img-4.jpg",
+  //   githubLink: "https://github.com/nayanhajare/portfolio-website",
+  //   deployedLink: "https://nayanportfolio-xi.vercel.app",
+  // },
 ];
 
 const ProjectsMain = () => {
