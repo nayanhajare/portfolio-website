@@ -8,7 +8,7 @@ const projects = [
     name: "Loan Application System",
     year: "Jul2025",
     align: "right",
-    image: "/images/website-img-1.jpg",
+    image: "/images/Loan_app.jpeg",
     githubLink: "https://github.com/nayanhajare/Loan-App-frontend",
     deployedLink: "https://loan-app-frontend-eight.vercel.app",
   },
@@ -16,7 +16,7 @@ const projects = [
     name: "TeamSpace – Collaboration Tool",
     year: "Jun2025",
     align: "left",
-    image: "/images/website-img-2.webp",
+    image: "/images/TeamSpace.jpeg",
     githubLink: "https://github.com/nayanhajare/TeamSpace-Frontend",
     deployedLink: "https://team-space-pi.vercel.app",
   },
@@ -24,7 +24,7 @@ const projects = [
     name: "Investment Portfolio Tracker",
     year: "Feb2025",
     align: "right",
-    image: "/images/website-img-3.jpg",
+    image: "/images/Investment portfolio.jpeg",
     githubLink: "https://github.com/nayanhajare/Investment-Protfolio-Tracker",
     deployedLink: "https://nayan-investmentportfoliotracker.netlify.app/login.html",
   },
@@ -50,16 +50,23 @@ const ProjectsMain = () => {
         <ProjectsText />
       </motion.div>
       <div className="flex flex-col gap-20 max-w-[900px] mx-auto mt-12">
-        {projects.map((project) => (
-          <SingleProject
+        {projects.map((project, index) => (
+          <motion.div
             key={project.githubLink}
-            name={project.name}
-            year={project.year}
-            align={project.align}
-            image={project.image}
-            githubLink={project.githubLink}
-            deployedLink={project.deployedLink}
-          />
+            variants={fadeIn("top", 0.2 * index)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            <SingleProject
+              name={project.name}
+              year={project.year}
+              align={project.align}
+              image={project.image}
+              githubLink={project.githubLink}
+              deployedLink={project.deployedLink}
+            />
+          </motion.div>
         ))}
       </div>
     </div>

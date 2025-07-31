@@ -47,9 +47,15 @@ const SingleProject = ({ name, year, align, image, githubLink, deployedLink }) =
           </a>
         </div>
       </div>
-      <div className="max-h-[220px] max-w-[400px] rounded-xl overflow-hidden hover:scale-110 transform transition-all duration-500 ralative border border-white">
-        <div className="w-full h-full bg-cyan opacity-50 absolute top-0 left-0 hover:opacity-0 transition-all duration-500 md:block sm:hidden"></div>
-        <img src={image} alt="website image" className="w-full h-full" />
+      <div className="max-h-[220px] max-w-[400px] rounded-xl overflow-hidden hover:scale-105 transform transition-all duration-700 relative group shadow-2xl hover:shadow-cyan/50">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan/20 via-transparent to-orange/20 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 z-10"></div>
+        <img 
+          src={image} 
+          alt="website image" 
+          className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-500" 
+        />
+        <div className="absolute inset-0 border-2 border-transparent group-hover:border-cyan/50 rounded-xl transition-all duration-500"></div>
       </div>
     </motion.div>
   );
