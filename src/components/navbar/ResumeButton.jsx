@@ -1,7 +1,7 @@
 const ResumeButton = () => {
   const handleResumeDownload = () => {
     // Open in new tab
-    window.open('/NayanHajare-Resume.pdf', '_blank');
+    window.open('/Nayan_Hajare_Resume.pdf', '_blank');
     
     // Also trigger download
     const link = document.createElement('a');
